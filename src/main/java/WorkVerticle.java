@@ -19,14 +19,15 @@ public class WorkVerticle extends AbstractVerticle {
                 String work = data[0];
                 String jobId = data[1];
 
-                String result = work + "*********"  + verticleId;
+                String result = work + "Completed***";
                 //System.out.println(result);
-
+/*
                 Integer jobCount =
                         Integer.parseInt(getVertx().sharedData().getLocalMap("jobCount").get(jobId).toString());
-                String event = String.format("%s:%d:%s",jobId,jobCount,result);
+                String event = String.format("%s:%d:%s",jobId,jobCount,result);*/
 
-                vertx.eventBus().publish("resultCombiner",event);
+                objectMessage.reply(result);
+                //vertx.eventBus().publish("resultCombiner",event);
             }
         });
     }

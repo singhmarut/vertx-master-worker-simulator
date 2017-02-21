@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * Created by marutsingh on 2/20/17.
+ * Combines the result
  */
 public class ResultCombiner extends AbstractVerticle {
 
